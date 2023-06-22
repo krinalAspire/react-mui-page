@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Nav from './Nav';
 import Page from './Page';
@@ -5,7 +6,10 @@ import Page from './Page';
 function App() {
   return (
    <>
-    <Page/>
+   <Routes>
+    {/* <Route path='/' element={<Page/>}/> */}
+    <Route path='/' element={<Nav/>}/>
+   </Routes>
     {/* <Nav/> */}
    </>
   );
