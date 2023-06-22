@@ -1,13 +1,9 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import { borderLeft, margin } from "@mui/system";
 import Box from '@mui/material/Box';
 
 export default function Page() {
@@ -15,13 +11,13 @@ export default function Page() {
     <>
       <Card
         sx={{
-          width: 1000,
-          margin: 15,
-          border: "1px dashed #D3D3D3",
-          padding: "0 20px 20px",
+          width: "100vw",
+          margin: "10px auto",
+          height:"100vh",
+          border: "1px dashed #D3D3D3"
         }}
       >
-        <Typography sx={{display:"flex", justifyContent:"flex-end", marginTop:"25px", marginRight:"15px"}}>
+        <Typography sx={{display:"flex", justifyContent:"flex-end", marginTop:"25px", marginRight:"30px"}}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -40,8 +36,8 @@ export default function Page() {
           <line x1="9" y1="9" x2="15" y2="15"></line>
         </svg>
         </Typography>
-        {/* <CardMedia /> */}
         <CardContent>
+          <Box m={10}>
           <Typography
             gutterBottom
             variant="h5"
@@ -52,20 +48,15 @@ export default function Page() {
           >
             Upload your Documents
           </Typography>
-          <Typography color="text.secondary" align="center" 
-          sx={{ fontSize: {
-            lg: 20,
-            md: 15,
-            sm: 10,
-            xs: 2
-          }}}
+          <Typography color="text.secondary" align="center" sx={{fontSize:'1rem'}}
           >
             PDF, Word Documents, and images accepted. Documents will be
             intelligently classNameified into:Resumes, Receipts, invoices etc.
           </Typography>
 
-          <Grid container marginTop="35px" columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid xs={4} sx={{ borderRight: "1px solid #D3D3D3" }}>
+
+          <Grid container marginTop="20px" columns={{ xs: 4, sm: 4, md: 12 }} padding={3}>
+            <Grid xs={4} sx={{ borderRight: "1px solid #D3D3D3", marginTop:{xs:"20px", sm:"15px"}, padding:"0px 70px" }} >
               <Typography align="center" marginBottom="5px">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,13 +70,14 @@ export default function Page() {
                   stroke-linejoin="round"
                   class="feather feather-send"
                   color="#808080"
+                  transform="rotate(270)"
                 >
                   <line x1="22" y1="2" x2="11" y2="13"></line>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
               </Typography>
               <Typography
-                variant="body2"
+                variant="h6"
                 align="center"
                 sx={{ fontWeight: "bold" }}
               >
@@ -101,19 +93,21 @@ export default function Page() {
                 sx={{ fontSize: {
                   lg: 15,
                   md: 10,
-                  sm: 5,
-                  xs: 2
+                  sm: 10,
+                  xs: 10
                 }}}
               >
                 Drag and Drop files from your computer or
               </Typography>
+              <Typography align="center">
               <Button
                 variant="contained"
-                size="large"
+                // size="medium"
                 sx={{
                   backgroundColor: "#9F77EB",
                   textTransform: "none",
-                  ml: 10,
+                  // ml: 10,
+                  Button:{size:{sm:"small", md:"medium"}},
                   mt: 3,
                   ":hover": {
                     bgcolor: "#9F77EB",
@@ -123,9 +117,11 @@ export default function Page() {
               >
                 Choose Files
               </Button>
+              </Typography>
             </Grid>
 
-            <Grid xs={4} sx={{ borderRight: "1px solid #D3D3D3"}}>
+
+            <Grid xs={4} sx={{ borderRight: "1px solid #D3D3D3", marginTop:{xs:"20px", sm:"15px"}, padding:"0px 54px" }} >
               <Typography align="center" marginBottom="5px">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -145,24 +141,25 @@ export default function Page() {
                 </svg>
               </Typography>
               <Typography
-                variant="body2"
+                variant="h6"
                 align="center"
                 sx={{ fontWeight: "bold" }}
               >
                 Use the API
               </Typography>
 
-              <Grid container spacing={-4} ml={3} marginTop="10px">
+              
+              <Grid container spacing={-4} ml={2} marginTop="10px">
                 <Grid xs={5}>
                   <Typography
-                    variant="body2"
+                    // variant="body2"
                     color="text.secondary"
-                    sx={{ display: "flex", justifyContent: "flex-end" }}
+                    sx={{ display: "flex", justifyContent: "flex-end", fontSize: '0.9rem' }}
                   >
                     Copy your
                   </Typography>
                 </Grid>
-                <Grid xs={2}>
+                <Grid xs={3}>
                   <Typography align="center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -181,22 +178,22 @@ export default function Page() {
                     </svg>
                   </Typography>
                 </Grid>
-                <Grid xs={5}>
+                <Grid xs={4}>
                   <Typography sx={{ color: "#9F77EB" }}>API Key</Typography>
                 </Grid>
               </Grid>
 
-              <Grid container spacing={-4} ml={3}>
+              <Grid container spacing={-4} ml={2}>
                 <Grid xs={5}>
                   <Typography
-                    variant="body2"
+                    // variant="body2"
                     color="text.secondary"
-                    sx={{ display: "flex", justifyContent: "flex-end" }}
+                    sx={{ display: "flex", justifyContent: "flex-end",fontSize: '0.9rem' }}
                   >
                     Read the
                   </Typography>
                 </Grid>
-                <Grid xs={2}>
+                <Grid xs={3}>
                   <Typography align="center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -216,23 +213,24 @@ export default function Page() {
                     </svg>
                   </Typography>
                 </Grid>
-                <Grid xs={5}>
+                <Grid xs={4}>
                   <Typography sx={{ color: "#9F77EB" }}>API Docs</Typography>
                 </Grid>
               </Grid>
 
-              <Grid container spacing={-4} ml={3}>
+              
+              <Grid container spacing={-4} ml={2} >
                 <Grid xs={5}>
                   <Typography
-                    variant="body2"
+                    // variant="body2"
                     color="text.secondary"
-                    sx={{ display: "flex", justifyContent: "flex-end" }}
+                    sx={{ display: "flex", justifyContent: "flex-end",fontSize: '0.9rem' }}
                   >
                     View available
                   </Typography>
                 </Grid>
-                <Grid xs={2}>
-                  <Typography align="center">
+                <Grid xs={3}>
+                  <Typography align="center" variant="body2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -266,15 +264,17 @@ export default function Page() {
                     </svg>
                   </Typography>
                 </Grid>
-                <Grid xs={5}>
+                <Grid xs={4}>
                   <Typography sx={{ color: "#9F77EB" }}>
                     Integrations
                   </Typography>
                 </Grid>
               </Grid>
+              
+
             </Grid>
 
-            <Grid xs={4}>
+            <Grid xs={4} sx={{marginTop:{xs:"20px", sm:"15px", padding:"0px 60px" }}}>
               <Typography align="center" marginBottom="5px">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +294,7 @@ export default function Page() {
                 </svg>
               </Typography>
               <Typography
-                variant="body2"
+                variant="h6"
                 align="center"
                 sx={{ fontWeight: "bold" }}
               >
@@ -310,8 +310,8 @@ export default function Page() {
                 sx={{ fontSize: {
                   lg: 15,
                   md: 10,
-                  sm: 5,
-                  xs: 2
+                  sm: 10,
+                  xs: 10
                 }}}
               >
                 Send documents 1 by 1 or in bulk to the email for this workspace
@@ -319,7 +319,7 @@ export default function Page() {
               <Typography
                 variant="body2"
                 align="center"
-                marginTop="10px"
+                marginTop="15px"
                 sx={{ color: "#9F77EB" }}
               >
                 <svg
@@ -342,7 +342,7 @@ export default function Page() {
               </Typography>
             </Grid>
           </Grid>
-         
+         </Box>
         </CardContent>
       </Card>
     </>
