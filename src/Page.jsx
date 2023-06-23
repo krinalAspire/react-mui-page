@@ -42,7 +42,7 @@ export default function Page() {
           // margin:"10px auto",
           // margin:{md:'auto',sm:"20px 20px 20px 20px", xs:"20px 20px 20px 20px"},
           margin:"auto",
-          height: "100vh",
+          height: "99vh",
           border: "1px dashed #D3D3D3",
         }}
       >
@@ -69,7 +69,7 @@ export default function Page() {
         </Box>
 
         <CardContent>
-          <Box>
+            <Box mt={7}>        
             <Typography
               gutterBottom
               variant="h5"
@@ -179,8 +179,7 @@ export default function Page() {
                 sx={{
                   borderRight: "1px solid #D3D3D3",
                   marginTop: { xs: "20px", sm: "15px" },
-                  // padding: "0px 54px"
-                  padding: {xs : "0p___=x 54px" ,sm : "0px 36px"},
+                  padding: "0px 20px"
                 }}
               >
                 <Typography align="center" marginBottom="5px">
@@ -217,7 +216,13 @@ export default function Page() {
                       sx={{
                         display: "flex",
                         justifyContent: "flex-end",
-                        fontSize: "0.9rem",
+                        // fontSize: "0.9rem",
+                        fontSize: {
+                      lg: 15,
+                      md: 10,
+                      sm: 10,
+                      xs: 10,
+                    },
                       }}
                     >
                       Copy your
@@ -242,7 +247,12 @@ export default function Page() {
                       </svg>
                     </Typography>
                   </Grid>
-                  <Grid xs={4}>
+                  <Grid xs={4} sx={{fontSize: {
+                      lg: 15,
+                      md: 10,
+                      sm: 10,
+                      xs: 10,
+                    },}}>
                     {/* <Typography* sx={{ color: "#9F77EB" }}>API KeyTypography*/}
                     <Link
                       to={"#"}
@@ -261,7 +271,13 @@ export default function Page() {
                       sx={{
                         display: "flex",
                         justifyContent: "flex-end",
-                        fontSize: "0.9rem",
+                        // fontSize: "0.9rem",
+                        fontSize: {
+                      lg: 15,
+                      md: 10,
+                      sm: 10,
+                      xs: 10,
+                    },
                       }}
                     >
                       Read the
@@ -287,7 +303,12 @@ export default function Page() {
                       </svg>
                     </Typography>
                   </Grid>
-                  <Grid xs={4}>
+                  <Grid xs={4} sx={{fontSize: {
+                      lg: 15,
+                      md: 10,
+                      sm: 10,
+                      xs: 10,
+                    },}}>
                     {/* <Typography sx={{ color: "#9F77EB" }}>API Docs</Typography> */}
                     <Link
                       to={"#"}
@@ -307,7 +328,13 @@ export default function Page() {
                       sx={{
                         display: "flex",
                         justifyContent: "flex-end",
-                        fontSize: "0.9rem",
+                        // fontSize: "0.9rem",
+                        fontSize: {
+                      lg: 15,
+                      md: 10,
+                      sm: 10,
+                      xs: 10,
+                    },
                       }}
                     >
                       View available
@@ -348,7 +375,12 @@ export default function Page() {
                       </svg>
                     </Typography>
                   </Grid>
-                  <Grid xs={4}>
+                  <Grid xs={4} sx={{fontSize: {
+                      lg: 15,
+                      md: 10,
+                      sm: 10,
+                      xs: 10,
+                    },}}>
                     {/* <Typography sx={{ color: "#9F77EB" }}> Integrations
                   </Typography> */}
                     <Link
@@ -414,7 +446,8 @@ export default function Page() {
                   variant="body2"
                   align="center"
                   marginTop="15px"
-                  sx={{ color: "#9F77EB" }}
+                  sx={{ color: "#9F77EB",cursor: 'pointer' }}
+                   onClick={handleEmailCopy}      
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -439,16 +472,11 @@ export default function Page() {
                     ></rect>
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                   </svg>
-                  <div
-                  onClick={handleEmailCopy}
-                    style={{ color: "#9E77EB", cursor: 'pointer'  }}
-                  >
                     Copy email address
-                  </div>
                 </Typography>
               </Grid>
             </Grid>
-          </Box>
+            </Box>
         </CardContent>
       </Card>
     </>
