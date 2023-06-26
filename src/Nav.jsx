@@ -82,7 +82,9 @@ export default function Nav() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} 
+      sx={{height:"130px"}}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -93,7 +95,7 @@ export default function Nav() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap component="div" >
             Persistent drawer
           </Typography>
         </Toolbar>

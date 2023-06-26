@@ -42,8 +42,10 @@ export default function Page() {
           // margin:"10px auto",
           // margin:{md:'auto',sm:"20px 20px 20px 20px", xs:"20px 20px 20px 20px"},
           margin:"auto",
-          height: "99vh",
+          height: "auto",
+          marginTop:"10vh",
           border: "1px dashed #D3D3D3",
+          overflow:"auto"
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
@@ -69,7 +71,7 @@ export default function Page() {
         </Box>
 
         <CardContent>
-            <Box mt={7}>        
+            <Box my={8}>        
             <Typography
               gutterBottom
               variant="h5"
