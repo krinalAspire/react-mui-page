@@ -20,7 +20,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Page from './Page';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -83,7 +83,7 @@ export default function Nav() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open} 
-      sx={{height:"130px"}}
+      sx={{height:"70px"}}
       >
         <Toolbar>
           <IconButton
@@ -147,6 +147,12 @@ export default function Nav() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
+         <Box sx={{height:{xs:"7vh", sm:"12vh", lg:"12vh"}
+         , backgroundColor:"yellow",
+          // marginTop:"35px"
+          }}>
+           
+         </Box>
         <Page/>
       </Main>
     </Box>

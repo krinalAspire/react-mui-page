@@ -37,23 +37,28 @@ export default function Page() {
     <>
       <Card
         sx={{
-          // width:{md:"100vw", sm:"80vw"},
-          // width: "100vw",
-          // margin:"10px auto",
-          // margin:{md:'auto',sm:"20px 20px 20px 20px", xs:"20px 20px 20px 20px"},
           margin:"auto",
-          height: "auto",
-          marginTop:"10vh",
+          width:"auto",
+          // height:{
+          //   lg:"65vh",
+          // md:"60vh",
+          //  sm:"80vh",xs:"100vh"},
+          height:{lg:"67vh",md:"auto", sm:"auto"},
+          // height:"100vh",
+          // height:"725px",
+          borderRadius: "5px",
+          // marginTop:"3vh",
+          marginTop:"2vh",
           border: "1px dashed #D3D3D3",
-          overflow:"auto"
+          // overflow:{xs:"auto", md:"hidden", sm:"auto", lg:"hidden"}
         }}
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <Button sx={{ marginTop: "25px", marginRight: "30px" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -61,7 +66,7 @@ export default function Page() {
               stroke-linecap="round"
               stroke-linejoin="round"
               class="feather feather-x-circle"
-              color="#808080"
+              color="#868686"
             >
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="15" y1="9" x2="9" y2="15"></line>
@@ -71,21 +76,24 @@ export default function Page() {
         </Box>
 
         <CardContent>
-            <Box my={8}>        
+            <Box SX={{ mt:{lg:2, sm:0, md:2}}}>        
             <Typography
               gutterBottom
               variant="h5"
               component="div"
               align="center"
-              margin={2}
-              sx={{ fontWeight: "bold" }}
+              // margin={{lg:2, sm:0}}
+              sx={{ fontWeight: "600", fontFamily:"Poppins",
+              // fontSize:{md:20, sm:10, xs:10}
+              // fontSize:"1.25rem"
+            }}
             >
               Upload your Documents
             </Typography>
             <Typography
-              color="text.secondary"
               align="center"
-              sx={{ fontSize: "1rem" }}
+              sx={{fontSize:"0.95rem", 
+              fontFamily:"Heebo", color:"rgba(43, 43, 43, 0.80)" }}
             >
               PDF, Word Documents, and images accepted. Documents will be
               intelligently classNameified into:Resumes, Receipts, invoices etc.
@@ -93,23 +101,23 @@ export default function Page() {
 
             <Grid
               container
-              marginTop="20px"
+              // marginTop={{lg:"10px", md:"7px"}}
               columns={{ xs: 4, sm: 4, md: 12 }}
-              padding={3}
+              sx={{padding:{lg:3, md:2, sm:2, xs:1}}}
             >
               <Grid
                 xs={4}
                 sx={{
                   borderRight: "1px solid #D3D3D3",
                   marginTop: { xs: "20px", sm: "15px" },
-                  padding: "0px 70px",
+                  padding: "0px 20px",
                 }}
               >
                 <Typography align="center" marginBottom="5px">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -117,7 +125,7 @@ export default function Page() {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="feather feather-send"
-                    color="#808080"
+                    color="#868686"
                     transform="rotate(270)"
                   >
                     <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -127,23 +135,24 @@ export default function Page() {
                 <Typography
                   variant="h6"
                   align="center"
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ fontWeight: "600", fontFamily:"Poppins" }}
                 >
                   Manual Upload
                 </Typography>
                 <Typography
                   variant="body2"
                   align="center"
-                  color="text.secondary"
                   marginTop="10px"
                   marginLeft={2}
                   sx={{
+                    color:"rgba(43, 43, 43, 0.80)",
                     fontSize: {
                       lg: 15,
                       md: 10,
                       sm: 10,
                       xs: 10,
                     },
+                    fontFamily:"Heebo"
                   }}
                 >
                   Drag and Drop files from your computer or
@@ -159,6 +168,10 @@ export default function Page() {
                     sx={{
                       backgroundColor: "#9F77EB",
                       textTransform: "none",
+                      fontSize:"1rem",
+                      fontFamily:"Heebo",
+                      fontWeight:"500",
+                      borderRadius:"5px",
                       // ml: 10,
                       Button: { size: { sm: "small", md: "medium" } },
                       mt: 3,
@@ -187,8 +200,8 @@ export default function Page() {
                 <Typography align="center" marginBottom="5px">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -196,7 +209,7 @@ export default function Page() {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="feather feather-code"
-                    color="#808080"
+                    color="#868686"
                   >
                     <polyline points="16 18 22 12 16 6"></polyline>
                     <polyline points="8 6 2 12 8 18"></polyline>
@@ -205,7 +218,7 @@ export default function Page() {
                 <Typography
                   variant="h6"
                   align="center"
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ fontWeight: "600", fontFamily:"Poppins" }}
                 >
                   Use the API
                 </Typography>
@@ -213,18 +226,17 @@ export default function Page() {
                 <Grid container spacing={-4} ml={2} marginTop="10px">
                   <Grid xs={5}>
                     <Typography
-                      // variant="body2"
-                      color="text.secondary"
                       sx={{
                         display: "flex",
                         justifyContent: "flex-end",
-                        // fontSize: "0.9rem",
                         fontSize: {
                       lg: 15,
                       md: 10,
                       sm: 10,
                       xs: 10,
                     },
+                    fontFamily:"Heebo",
+                    color:"rgba(43, 43, 43, 0.80)"
                       }}
                     >
                       Copy your
@@ -234,8 +246,8 @@ export default function Page() {
                     <Typography align="center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="22"
+                        height="22"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -254,7 +266,10 @@ export default function Page() {
                       md: 10,
                       sm: 10,
                       xs: 10,
-                    },}}>
+                    },
+                    fontFamily:"Heebo",
+                    fontWeight:"600"
+                    }}>
                     {/* <Typography* sx={{ color: "#9F77EB" }}>API KeyTypography*/}
                     <Link
                       to={"#"}
@@ -268,18 +283,17 @@ export default function Page() {
                 <Grid container spacing={-4} ml={2}>
                   <Grid xs={5} >
                     <Typography
-                      // variant="body2"
-                      color="text.secondary"
                       sx={{
                         display: "flex",
                         justifyContent: "flex-end",
-                        // fontSize: "0.9rem",
                         fontSize: {
                       lg: 15,
                       md: 10,
                       sm: 10,
                       xs: 10,
                     },
+                    fontFamily:"Heebo",
+                    color:"rgba(43, 43, 43, 0.80)"
                       }}
                     >
                       Read the
@@ -289,8 +303,8 @@ export default function Page() {
                     <Typography align="center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="22"
+                        height="22"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -310,7 +324,10 @@ export default function Page() {
                       md: 10,
                       sm: 10,
                       xs: 10,
-                    },}}>
+                    },
+                    fontFamily:"Heebo",
+                    fontWeight:"600"
+                    }}>
                     {/* <Typography sx={{ color: "#9F77EB" }}>API Docs</Typography> */}
                     <Link
                       to={"#"}
@@ -324,19 +341,17 @@ export default function Page() {
                 <Grid container spacing={-4} ml={2}>
                   <Grid xs={5}>
                     <Typography
-                      // variant="body2"
-                      color="text.secondary"
-                      
                       sx={{
                         display: "flex",
                         justifyContent: "flex-end",
-                        // fontSize: "0.9rem",
                         fontSize: {
                       lg: 15,
                       md: 10,
                       sm: 10,
                       xs: 10,
                     },
+                    fontFamily:"Heebo",
+                    color:"rgba(43, 43, 43, 0.80)"
                       }}
                     >
                       View available
@@ -346,8 +361,8 @@ export default function Page() {
                     <Typography align="center" variant="body2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="22"
+                        height="22"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -382,9 +397,10 @@ export default function Page() {
                       md: 10,
                       sm: 10,
                       xs: 10,
-                    },}}>
-                    {/* <Typography sx={{ color: "#9F77EB" }}> Integrations
-                  </Typography> */}
+                    },
+                    fontFamily:"Heebo",
+                    fontWeight:"600"
+                    }}>
                     <Link
                       to={"#"}
                       style={{ color: "#9E77EB", textDecoration: "none" }}
@@ -398,14 +414,14 @@ export default function Page() {
               <Grid
                 xs={4}
                 sx={{
-                  marginTop: { xs: "20px", sm: "15px", padding: "0px 60px" },
+                  marginTop: { xs: "20px", sm: "15px", padding: "0px 20px" },
                 }}
               >
                 <Typography align="center" marginBottom="5px">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -413,7 +429,7 @@ export default function Page() {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     class="feather feather-mail"
-                    color="#808080"
+                    color="#868686"
                   >
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
@@ -422,14 +438,12 @@ export default function Page() {
                 <Typography
                   variant="h6"
                   align="center"
-                  sx={{ fontWeight: "bold" }}
-                >
+                  sx={{ fontFamily:"Poppins", fontWeight:"600"}} >
                   Attach in an email
                 </Typography>
                 <Typography
                   variant="body2"
                   align="center"
-                  color="text.secondary"
                   marginTop="10px"
                   marginLeft={3}
                   sx={{
@@ -439,6 +453,8 @@ export default function Page() {
                       sm: 10,
                       xs: 10,
                     },
+                    fontFamily:"Heebo",
+                    color:"rgba(43, 43, 43, 0.80)"
                   }}
                 >
                   Send documents 1 by 1 or in bulk to the email for this
@@ -448,13 +464,19 @@ export default function Page() {
                   variant="body2"
                   align="center"
                   marginTop="15px"
-                  sx={{ color: "#9F77EB",cursor: 'pointer' }}
+                  sx={{ color: "#9F77EB",cursor: 'pointer', fontFamily:"Heebo",
+                  fontWeight:"600",fontSize: {
+                    lg: 15,
+                    md: 10,
+                    sm: 10,
+                    xs: 10,
+                  }, }}
                    onClick={handleEmailCopy}      
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
+                    width="22"
+                    height="22"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
