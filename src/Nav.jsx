@@ -18,9 +18,23 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { createTheme, ThemeProvider } from '@mui/material';
 import Page from './Page';
 
+const Ntheme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 600,       // Extra small devices (portrait phones)
+      sm: 960,     // Small devices (landscape phones)
+      md: 1366,     // Medium devices (tablets)
+      lg: 1440,    // Large devices (desktops)
+      xl: 1920     // Extra large devices (large desktops)
+    }
+  }
+});
+
 const drawerWidth = 300;
+// const drawerWidth = {xl:383, md:300, sm:280};
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -80,10 +94,11 @@ export default function Nav() {
   };
 
   return (
+    <ThemeProvider theme={Ntheme}>
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open} 
-      sx={{height:"70px"}}
+      sx={{height:{sm:"65px",md:"68px", xl:"75px"}}}
       >
         <Toolbar>
           <IconButton
@@ -147,7 +162,7 @@ export default function Nav() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-         <Box sx={{height:{xs:"7vh", sm:"12vh", lg:"12vh"}
+         <Box sx={{height:{xs:"7vh",sm:"12vh", md:"12vh", lg:"13vh", xl:"16vh"}
          , backgroundColor:"yellow",
           // marginTop:"35px"
           }}>
@@ -156,5 +171,6 @@ export default function Nav() {
         <Page/>
       </Main>
     </Box>
+    </ThemeProvider>
   );
 }

@@ -10,7 +10,6 @@ function App() {
     {/* <Route path='/' element={<Page/>}/> */}
     <Route path='/' element={<Nav/>}/>
    </Routes>
-    {/* <Nav/> */}
    </>
   );
 }
