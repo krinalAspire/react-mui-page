@@ -83,14 +83,14 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 export default function Nav() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const handleDrawerOpen = () => {
     setOpen(true);
   };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpen(true);
   };
 
   return (

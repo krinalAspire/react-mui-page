@@ -82,7 +82,7 @@ export default function Page() {
             border: "1px dashed #D3D3D3",
             overflow: {
               xs: "auto",
-              sm: "auto",
+              sm: "hidden",
               md: "hidden",
               lg: "hidden",
               xl: "hidden",
@@ -150,7 +150,7 @@ export default function Page() {
 
               <Grid
                 container
-                columns={{ xs: 4, sm: 4, md: 12, lg: 12, xl: 12 }}
+                columns={{ xs: 4, sm: 12, md: 12, lg: 12, xl: 12 }}
                 sx={{ padding: { xl: 4, lg: 4, md: 3 } }}
               >
                 <Grid
