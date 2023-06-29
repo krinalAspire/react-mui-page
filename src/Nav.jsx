@@ -24,7 +24,7 @@ import Page from './Page';
 const Ntheme = createTheme({
   breakpoints: {
     values: {
-      xs: 600,       // Extra small devices (portrait phones)
+      xs: 0,       // Extra small devices (portrait phones)
       sm: 960,     // Small devices (landscape phones)
       md: 1366,     // Medium devices (tablets)
       lg: 1440,    // Large devices (desktops)
@@ -33,8 +33,8 @@ const Ntheme = createTheme({
   }
 });
 
-const drawerWidth = 300;
-// const drawerWidth = {xl:383, md:300, sm:280};
+// const drawerWidth = 300;
+const drawerWidth = {xl:383, lg:383, md:300, sm:250, xs:250 };
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -98,7 +98,7 @@ export default function Nav() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open} 
-      sx={{height:{sm:"65px",md:"68px", xl:"75px"}}}
+      sx={{height:{sm:"65px",md:"65px", xl:"75px"}}}
       >
         <Toolbar>
           <IconButton

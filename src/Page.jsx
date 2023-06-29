@@ -7,6 +7,14 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
+import send from "./images/send.svg";
+import code from "./images/code.svg";
+import mail from "./images/mail.svg";
+import book from "./images/book-open.svg";
+import copy from "./images/copy.svg";
+import cpu from "./images/cpu.svg";
+import key from "./images/key.svg";
+import circle from "./images/x-circle.svg";
 
 export default function Page() {
   const theme = createTheme({
@@ -65,9 +73,9 @@ export default function Page() {
               xs: "auto",
             },
             height: {
-              xl: "71vh",
-              lg: "72vh",
-              md: "67vh",
+              xl: "69vh",
+              lg: "69vh",
+              md: "65vh",
               sm: "67vh",
               xs: "80vh",
             },
@@ -92,45 +100,54 @@ export default function Page() {
           <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
             <Button
               sx={{
-                marginTop: { md: "25px", lg: "30px", xl: "40px" },
-                marginRight: { md: "30px", lg: "35px", xl: "40px" },
+                marginTop: {
+                  md: "25px",
+                  lg: "30px",
+                  xl: "40px",
+                  sm: "20px",
+                  xs: "15px",
+                },
+                marginRight: {
+                  md: "30px",
+                  lg: "35px",
+                  xl: "40px",
+                  sm: "25px",
+                  xs: "20px",
+                },
               }}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x-circle"
-                color="#868686"
+              <Typography
+                sx={{
+                  width: { xl: 28, lg: 28, md: 23, sm: 20, xs: 18 },
+                  height: { xl: 28, lg: 28, md: 23, sm: 20, xs: 18 },
+                }}
               >
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="15" y1="9" x2="9" y2="15"></line>
-                <line x1="9" y1="9" x2="15" y2="15"></line>
-              </svg>
+                <img src={circle} alt="x-circle" />
+              </Typography>
             </Button>
           </Box>
 
           <CardContent>
             <Box
               sx={{
-                marginTop: { xl: "12vh", lg: "9vh", md: "2.56vh", sm: "2vh" },
+                marginTop: { xl: "12vh", lg: "9vh", md: "6vh", sm: "2vh" },
               }}
             >
               <Typography
                 gutterBottom
-                variant="h5"
                 component="div"
                 align="center"
-                margin={{ xl: 2, lg: 2 }}
+                margin={{ xl: 2, lg: 2, md:2, sm:2, xs:2 }}
                 sx={{
                   fontWeight: "600",
                   fontFamily: "Poppins",
+                  fontSize: {
+                    xl: 24,
+                    lg: 24,
+                    md: 19,
+                    sm: 10,
+                    xs: 10,
+                  },
                 }}
               >
                 Upload your Documents
@@ -138,7 +155,14 @@ export default function Page() {
               <Typography
                 align="center"
                 sx={{
-                  fontSize: "0.95rem",
+                  // fontSize: "0.95rem",
+                  fontSize: {
+                    xl: 15,
+                    lg: 15,
+                    md: 12,
+                    sm: 10,
+                    xs: 10,
+                  },
                   fontFamily: "Heebo",
                   color: "rgba(43, 43, 43, 0.80)",
                 }}
@@ -151,52 +175,68 @@ export default function Page() {
               <Grid
                 container
                 columns={{ xs: 4, sm: 12, md: 12, lg: 12, xl: 12 }}
-                sx={{ padding: { xl: 4, lg: 4, md: 3 } }}
+                sx={{ padding: { xl: 4, lg: 4, md: 2 , sm:1, xs:1} }}
               >
                 <Grid
                   xs={4}
+                  align="center"
                   sx={{
                     borderRight: "1px solid #D3D3D3",
-                    marginTop: { xs: "4vh", sm: "2.6vh" },
+                    marginTop: {
+                      xl: "3.5vh",
+                      lg: "3.5vh",
+                      md: "3vh",
+                      xs: "1vh",
+                      sm: "2.6vh",
+                    },
                     padding: "0px 20px",
                   }}
                 >
-                  <Typography align="center" marginBottom="5px">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-send"
-                      color="#868686"
-                      transform="rotate(270)"
-                    >
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                  </Typography>
                   <Typography
-                    variant="h6"
-                    align="center"
-                    sx={{ fontWeight: "600", fontFamily: "Poppins" }}
+                    sx={{
+                      width: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      height: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      marginBottom: {
+                        xl: "17px",
+                        lg: "7px",
+                        md: "5px",
+                        sm: "3px",
+                        xs: "3px",
+                      },
+                    }}
+                  >
+                    <img src={send} alt="send" />
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontFamily: "Poppins",
+                      fontSize: {
+                        xl: 20,
+                        lg: 20,
+                        md: 16,
+                        sm: 10,
+                        xs: 10,
+                      },
+                    }}
                   >
                     Manual Upload
                   </Typography>
                   <Typography
-                    variant="body2"
-                    align="center"
-                    marginTop="10px"
+                    marginTop={{
+                      xl: "10px",
+                      lg: "10px",
+                      md: "5px",
+                      sm: "2px",
+                      xs: "2px",
+                    }}
                     sx={{
                       color: "rgba(43, 43, 43, 0.80)",
                       fontSize: {
                         xl: 15,
                         lg: 15,
-                        md: 13,
+                        md: 12,
                         sm: 10,
                         xs: 10,
                       },
@@ -205,7 +245,6 @@ export default function Page() {
                   >
                     Drag and Drop files from your computer or
                   </Typography>
-                  <Typography align="center">
                     <Box>
                       <input
                         type="file"
@@ -214,23 +253,22 @@ export default function Page() {
                         onChange={handleFileUpload}
                       />
                       <Button
-                        variant="contained"
                         sx={{
                           backgroundColor: "#9F77EB",
                           textTransform: "none",
-                          fontSize: "1rem",
+                          color:"white",
+                          fontSize: {
+                            xl: 15,
+                            lg: 15,
+                            md: 12,
+                            sm: 10,
+                            xs: 10,
+                          },
                           fontFamily: "Heebo",
                           fontWeight: "500",
                           borderRadius: "5px",
-                          Button: {
-                            size: {
-                              xs: "small",
-                              sm: "small",
-                              md: "medium",
-                              lg: "large",
-                              xl: "large",
-                            },
-                          },
+                          width:{xl:"132px", lg:"132px", md:"100px", sm:"95px", xs:"90px"},
+                          height:{xl:"50px", lg:"50px", md:"30px", sm:"25px", xs:"25px"},
                           mt: 3,
                           ":hover": {
                             bgcolor: "#9F77EB",
@@ -242,53 +280,81 @@ export default function Page() {
                         Choose Files
                       </Button>
                     </Box>
-                  </Typography>
                 </Grid>
 
                 <Grid
                   xs={4}
+                  align="center"
                   sx={{
                     borderRight: "1px solid #D3D3D3",
-                    marginTop: { xs: "4vh", sm: "2.6vh" },
+                    marginTop: {
+                      xl: "3.5vh",
+                      lg: "3.5vh",
+                      md: "3vh",
+                      xs: "1vh",
+                      sm: "2.6vh",
+                    },
                     padding: "0px 20px",
                   }}
                 >
-                  <Typography align="center" marginBottom="5px">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-code"
-                      color="#868686"
-                    >
-                      <polyline points="16 18 22 12 16 6"></polyline>
-                      <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
+                  <Typography
+                    sx={{
+                      width: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      height: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      marginBottom: {
+                        xl: "17px",
+                        lg: "7px",
+                        md: "5px",
+                        sm: "3px",
+                        xs: "3px",
+                      },
+                    }}
+                  >
+                    <img src={code} alt="code" />
                   </Typography>
                   <Typography
-                    variant="h6"
-                    align="center"
-                    sx={{ fontWeight: "600", fontFamily: "Poppins" }}
+                    sx={{
+                      fontWeight: "600",
+                      fontFamily: "Poppins",
+                      fontSize: {
+                        xl: 20,
+                        lg: 20,
+                        md: 16,
+                        sm: 10,
+                        xs: 10,
+                      },
+                    }}
                   >
                     Use the API
                   </Typography>
 
-                  <Grid container spacing={-4} ml={2} marginTop="10px">
-                    <Grid xs={5}>
+                  <Grid
+                    container
+                    spacing={-4}
+                    marginTop={{
+                      xl: "10px",
+                      lg: "10px",
+                      md: "5px",
+                      sm: "2px",
+                      xs: "2px",
+                    }}
+                    marginBottom={{
+                      xl: "12px",
+                      lg: "12px",
+                      md: "3px",
+                      sm: "2px",
+                      xs: "2px",
+                    }}
+                  >
+                    <Grid xs={5} align="right">
                       <Typography
                         sx={{
-                          display: "flex",
-                          justifyContent: "flex-end",
+                          // display: "flex",
+                          // justifyContent: "flex-end",
                           fontSize: {
                             xl: 15,
                             lg: 15,
-                            md: 13,
+                            md: 12,
                             sm: 10,
                             xs: 10,
                           },
@@ -299,32 +365,24 @@ export default function Page() {
                         Copy your
                       </Typography>
                     </Grid>
-                    <Grid xs={3}>
-                      <Typography align="center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-key"
-                          color="#9F77EB"
-                        >
-                          <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
-                        </svg>
+                    <Grid xs={2} align="center">
+                      <Typography
+                        sx={{
+                          width: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                          height: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                        }}
+                      >
+                        <img src={key} alt="key" />
                       </Typography>
                     </Grid>
                     <Grid
-                      xs={4}
+                      align="left"
+                      xs={5}
                       sx={{
                         fontSize: {
                           xl: 15,
                           lg: 15,
-                          md: 13,
+                          md: 12,
                           sm: 10,
                           xs: 10,
                         },
@@ -341,16 +399,26 @@ export default function Page() {
                     </Grid>
                   </Grid>
 
-                  <Grid container spacing={-4} ml={2}>
-                    <Grid xs={5}>
+                  <Grid
+                    container
+                    spacing={-4}
+                    marginBottom={{
+                      xl: "12px",
+                      lg: "12px",
+                      md: "3px",
+                      sm: "2px",
+                      xs: "2px",
+                    }}
+                  >
+                    <Grid xs={5} align="right">
                       <Typography
                         sx={{
-                          display: "flex",
-                          justifyContent: "flex-end",
+                          // display: "flex",
+                          // justifyContent: "flex-end",
                           fontSize: {
                             xl: 15,
                             lg: 15,
-                            md: 13,
+                            md: 12,
                             sm: 10,
                             xs: 10,
                           },
@@ -361,33 +429,24 @@ export default function Page() {
                         Read the
                       </Typography>
                     </Grid>
-                    <Grid xs={3}>
-                      <Typography align="center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-book-open"
-                          color="#9F77EB"
-                        >
-                          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
+                    <Grid xs={2} align="center">
+                      <Typography
+                        sx={{
+                          width: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                          height: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                        }}
+                      >
+                        <img src={book} alt="book" />
                       </Typography>
                     </Grid>
                     <Grid
-                      xs={4}
+                      align="left"
+                      xs={5}
                       sx={{
                         fontSize: {
                           xl: 15,
                           lg: 15,
-                          md: 13,
+                          md: 12,
                           sm: 10,
                           xs: 10,
                         },
@@ -404,16 +463,22 @@ export default function Page() {
                     </Grid>
                   </Grid>
 
-                  <Grid container spacing={-4} ml={2}>
-                    <Grid xs={5}>
+                  <Grid container spacing={-4} marginBottom={{
+                      xl: "12px",
+                      lg: "12px",
+                      md: "3px",
+                      sm: "2px",
+                      xs: "2px",
+                    }}>
+                    <Grid xs={5} align="right">
                       <Typography
                         sx={{
-                          display: "flex",
-                          justifyContent: "flex-end",
+                          // display: "flex",
+                          // justifyContent: "flex-end",
                           fontSize: {
                             xl: 15,
                             lg: 15,
-                            md: 13,
+                            md: 12,
                             sm: 10,
                             xs: 10,
                           },
@@ -424,48 +489,24 @@ export default function Page() {
                         View available
                       </Typography>
                     </Grid>
-                    <Grid xs={3}>
-                      <Typography align="center" variant="body2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-cpu"
-                          color="#9F77EB"
-                        >
-                          <rect
-                            x="4"
-                            y="4"
-                            width="16"
-                            height="16"
-                            rx="2"
-                            ry="2"
-                          ></rect>
-                          <rect x="9" y="9" width="6" height="6"></rect>
-                          <line x1="9" y1="1" x2="9" y2="4"></line>
-                          <line x1="15" y1="1" x2="15" y2="4"></line>
-                          <line x1="9" y1="20" x2="9" y2="23"></line>
-                          <line x1="15" y1="20" x2="15" y2="23"></line>
-                          <line x1="20" y1="9" x2="23" y2="9"></line>
-                          <line x1="20" y1="14" x2="23" y2="14"></line>
-                          <line x1="1" y1="9" x2="4" y2="9"></line>
-                          <line x1="1" y1="14" x2="4" y2="14"></line>
-                        </svg>
+                    <Grid xs={2} align="center">
+                      <Typography
+                        sx={{
+                          width: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                          height: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                        }}
+                      >
+                        <img src={cpu} alt="cpu" />
                       </Typography>
                     </Grid>
                     <Grid
-                      xs={4}
+                      align="left"
+                      xs={5}
                       sx={{
                         fontSize: {
                           xl: 15,
                           lg: 15,
-                          md: 13,
+                          md: 12,
                           sm: 10,
                           xs: 10,
                         },
@@ -484,46 +525,70 @@ export default function Page() {
                 </Grid>
 
                 <Grid
+                  align="center"
                   xs={4}
                   sx={{
-                    marginTop: { xs: "20px", sm: "15px", padding: "0px 20px" },
+                    marginTop: {
+                      xl: "3.5vh",
+                      lg: "3.5vh",
+                      md: "3vh",
+                      xs: "1vh",
+                      sm: "2.6vh",
+                    },
+                    padding: "0px 20px",
                   }}
                 >
-                  <Typography align="center" marginBottom="5px">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-mail"
-                      color="#868686"
-                    >
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
+                  <Typography
+                    sx={{
+                      width: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      height: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      marginBottom: {
+                        xl: "17px",
+                        lg: "7px",
+                        md: "5px",
+                        sm: "3px",
+                        xs: "3px",
+                      },
+                    }}
+                  >
+                    <img src={mail} alt="mail" />
                   </Typography>
                   <Typography
-                    variant="h6"
-                    align="center"
-                    sx={{ fontFamily: "Poppins", fontWeight: "600" }}
+                    sx={{
+                      fontFamily: "Poppins",
+                      fontWeight: "600",
+                      fontSize: {
+                        xl: 20,
+                        lg: 20,
+                        md: 16,
+                        sm: 10,
+                        xs: 10,
+                      },
+                      marginTop: {
+                        xl: "17px",
+                        lg: "17px",
+                        md: "10px",
+                        sm: "5px",
+                        xs: "2px",
+                      },
+                    }}
                   >
                     Attach in an email
                   </Typography>
                   <Typography
-                    variant="body2"
-                    align="center"
-                    marginTop="10px"
+                    marginTop={{
+                      xl: "10px",
+                      lg: "10px",
+                      md: "5px",
+                      sm: "2px",
+                      xs: "2px",
+                    }}
                     marginLeft={3}
                     sx={{
                       fontSize: {
                         xl: 15,
                         lg: 15,
-                        md: 13,
+                        md: 12,
                         sm: 10,
                         xs: 10,
                       },
@@ -535,9 +600,7 @@ export default function Page() {
                     workspace
                   </Typography>
                   <Typography
-                    variant="body2"
-                    align="center"
-                    marginTop="15px"
+                    marginTop="12px"
                     sx={{
                       color: "#9F77EB",
                       cursor: "pointer",
@@ -546,7 +609,7 @@ export default function Page() {
                       fontSize: {
                         xl: 15,
                         lg: 15,
-                        md: 13,
+                        md: 12,
                         sm: 10,
                         xs: 10,
                       },
