@@ -34,7 +34,7 @@ const Ntheme = createTheme({
 });
 
 // const drawerWidth = 300;
-const drawerWidth = {xl:383, lg:383, md:300, sm:250, xs:250 };
+const drawerWidth = {xl:383, lg:383, md:285, sm:250, xs:250 };
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({

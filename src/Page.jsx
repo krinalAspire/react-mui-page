@@ -130,7 +130,7 @@ export default function Page() {
           <CardContent>
             <Box
               sx={{
-                marginTop: { xl: "12vh", lg: "9vh", md: "6vh", sm: "2vh" },
+                marginTop: { xl: "12vh", lg: "9vh", md: "4vh", sm: "2vh" },
               }}
             >
               <Typography
