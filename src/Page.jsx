@@ -17,6 +17,38 @@ import key from "./images/key.svg";
 import circle from "./images/x-circle.svg";
 
 export default function Page() {
+  const Icon = {
+    xl: 32,
+    lg: 32,
+    md: 25,
+    sm: 23,
+    xs: 20,
+  };
+
+  const SubIcon = {
+    xl: 22,
+    lg: 22,
+    md: 20,
+    sm: 15,
+    xs: 13,
+  };
+
+  const Title = {
+    xl: 20,
+    lg: 20,
+    md: 16,
+    sm: 10,
+    xs: 10,
+  };
+
+  const Content = {
+    xl: 15,
+    lg: 15,
+    md: 12,
+    sm: 10,
+    xs: 10,
+  };
+
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -137,7 +169,7 @@ export default function Page() {
                 gutterBottom
                 component="div"
                 align="center"
-                margin={{ xl: 2, lg: 2, md:2, sm:2, xs:2 }}
+                margin={{ xl: 2, lg: 2, md: 2, sm: 2, xs: 2 }}
                 sx={{
                   fontWeight: "600",
                   fontFamily: "Poppins",
@@ -156,13 +188,7 @@ export default function Page() {
                 align="center"
                 sx={{
                   // fontSize: "0.95rem",
-                  fontSize: {
-                    xl: 15,
-                    lg: 15,
-                    md: 12,
-                    sm: 10,
-                    xs: 10,
-                  },
+                  fontSize: Content,
                   fontFamily: "Heebo",
                   color: "rgba(43, 43, 43, 0.80)",
                 }}
@@ -175,7 +201,7 @@ export default function Page() {
               <Grid
                 container
                 columns={{ xs: 4, sm: 12, md: 12, lg: 12, xl: 12 }}
-                sx={{ padding: { xl: 4, lg: 4, md: 2 , sm:1, xs:1} }}
+                sx={{ padding: { xl: 4, lg: 4, md: 2, sm: 1, xs: 1 } }}
               >
                 <Grid
                   xs={4}
@@ -194,8 +220,8 @@ export default function Page() {
                 >
                   <Typography
                     sx={{
-                      width: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
-                      height: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      width: Icon,
+                      height: Icon,
                       marginBottom: {
                         xl: "17px",
                         lg: "7px",
@@ -212,13 +238,7 @@ export default function Page() {
                     sx={{
                       fontWeight: "600",
                       fontFamily: "Poppins",
-                      fontSize: {
-                        xl: 20,
-                        lg: 20,
-                        md: 16,
-                        sm: 10,
-                        xs: 10,
-                      },
+                      fontSize: Title,
                     }}
                   >
                     Manual Upload
@@ -233,53 +253,53 @@ export default function Page() {
                     }}
                     sx={{
                       color: "rgba(43, 43, 43, 0.80)",
-                      fontSize: {
-                        xl: 15,
-                        lg: 15,
-                        md: 12,
-                        sm: 10,
-                        xs: 10,
-                      },
+                      fontSize: Content,
                       fontFamily: "Heebo",
                     }}
                   >
                     Drag and Drop files from your computer or
                   </Typography>
-                    <Box>
-                      <input
-                        type="file"
-                        ref={fileInputRef}
-                        style={{ display: "none" }}
-                        onChange={handleFileUpload}
-                      />
-                      <Button
-                        sx={{
-                          backgroundColor: "#9F77EB",
-                          textTransform: "none",
-                          color:"white",
-                          fontSize: {
-                            xl: 15,
-                            lg: 15,
-                            md: 12,
-                            sm: 10,
-                            xs: 10,
-                          },
-                          fontFamily: "Heebo",
-                          fontWeight: "500",
-                          borderRadius: "5px",
-                          width:{xl:"132px", lg:"132px", md:"100px", sm:"95px", xs:"90px"},
-                          height:{xl:"50px", lg:"50px", md:"30px", sm:"25px", xs:"25px"},
-                          mt: 3,
-                          ":hover": {
-                            bgcolor: "#9F77EB",
-                            color: "white",
-                          },
-                        }}
-                        onClick={handleButtonClick}
-                      >
-                        Choose Files
-                      </Button>
-                    </Box>
+                  <Box>
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      style={{ display: "none" }}
+                      onChange={handleFileUpload}
+                    />
+                    <Button
+                      sx={{
+                        backgroundColor: "#9F77EB",
+                        textTransform: "none",
+                        color: "white",
+                        fontSize: Content,
+                        fontFamily: "Heebo",
+                        fontWeight: "500",
+                        borderRadius: "5px",
+                        width: {
+                          xl: "132px",
+                          lg: "132px",
+                          md: "100px",
+                          sm: "95px",
+                          xs: "90px",
+                        },
+                        height: {
+                          xl: "50px",
+                          lg: "50px",
+                          md: "30px",
+                          sm: "25px",
+                          xs: "25px",
+                        },
+                        mt: 3,
+                        ":hover": {
+                          bgcolor: "#9F77EB",
+                          color: "white",
+                        },
+                      }}
+                      onClick={handleButtonClick}
+                    >
+                      Choose Files
+                    </Button>
+                  </Box>
                 </Grid>
 
                 <Grid
@@ -299,8 +319,8 @@ export default function Page() {
                 >
                   <Typography
                     sx={{
-                      width: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
-                      height: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      width: Icon,
+                      height: Icon,
                       marginBottom: {
                         xl: "17px",
                         lg: "7px",
@@ -316,13 +336,7 @@ export default function Page() {
                     sx={{
                       fontWeight: "600",
                       fontFamily: "Poppins",
-                      fontSize: {
-                        xl: 20,
-                        lg: 20,
-                        md: 16,
-                        sm: 10,
-                        xs: 10,
-                      },
+                      fontSize: Title,
                     }}
                   >
                     Use the API
@@ -351,13 +365,7 @@ export default function Page() {
                         sx={{
                           // display: "flex",
                           // justifyContent: "flex-end",
-                          fontSize: {
-                            xl: 15,
-                            lg: 15,
-                            md: 12,
-                            sm: 10,
-                            xs: 10,
-                          },
+                          fontSize: Content,
                           fontFamily: "Heebo",
                           color: "rgba(43, 43, 43, 0.80)",
                         }}
@@ -368,8 +376,8 @@ export default function Page() {
                     <Grid xs={2} align="center">
                       <Typography
                         sx={{
-                          width: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
-                          height: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                          width: SubIcon,
+                          height: SubIcon,
                         }}
                       >
                         <img src={key} alt="key" />
@@ -379,13 +387,7 @@ export default function Page() {
                       align="left"
                       xs={5}
                       sx={{
-                        fontSize: {
-                          xl: 15,
-                          lg: 15,
-                          md: 12,
-                          sm: 10,
-                          xs: 10,
-                        },
+                        fontSize: Content,
                         fontFamily: "Heebo",
                         fontWeight: "600",
                       }}
@@ -415,13 +417,7 @@ export default function Page() {
                         sx={{
                           // display: "flex",
                           // justifyContent: "flex-end",
-                          fontSize: {
-                            xl: 15,
-                            lg: 15,
-                            md: 12,
-                            sm: 10,
-                            xs: 10,
-                          },
+                          fontSize: Content,
                           fontFamily: "Heebo",
                           color: "rgba(43, 43, 43, 0.80)",
                         }}
@@ -432,8 +428,8 @@ export default function Page() {
                     <Grid xs={2} align="center">
                       <Typography
                         sx={{
-                          width: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
-                          height: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                          width: SubIcon,
+                          height: SubIcon,
                         }}
                       >
                         <img src={book} alt="book" />
@@ -443,13 +439,7 @@ export default function Page() {
                       align="left"
                       xs={5}
                       sx={{
-                        fontSize: {
-                          xl: 15,
-                          lg: 15,
-                          md: 12,
-                          sm: 10,
-                          xs: 10,
-                        },
+                        fontSize: Content,
                         fontFamily: "Heebo",
                         fontWeight: "600",
                       }}
@@ -463,25 +453,23 @@ export default function Page() {
                     </Grid>
                   </Grid>
 
-                  <Grid container spacing={-4} marginBottom={{
+                  <Grid
+                    container
+                    spacing={-4}
+                    marginBottom={{
                       xl: "12px",
                       lg: "12px",
                       md: "3px",
                       sm: "2px",
                       xs: "2px",
-                    }}>
+                    }}
+                  >
                     <Grid xs={5} align="right">
                       <Typography
                         sx={{
                           // display: "flex",
                           // justifyContent: "flex-end",
-                          fontSize: {
-                            xl: 15,
-                            lg: 15,
-                            md: 12,
-                            sm: 10,
-                            xs: 10,
-                          },
+                          fontSize: Content,
                           fontFamily: "Heebo",
                           color: "rgba(43, 43, 43, 0.80)",
                         }}
@@ -492,8 +480,8 @@ export default function Page() {
                     <Grid xs={2} align="center">
                       <Typography
                         sx={{
-                          width: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
-                          height: { xl: 22, lg: 22, md: 20, sm: 15, xs: 13 },
+                          width: SubIcon,
+                          height: SubIcon,
                         }}
                       >
                         <img src={cpu} alt="cpu" />
@@ -503,13 +491,7 @@ export default function Page() {
                       align="left"
                       xs={5}
                       sx={{
-                        fontSize: {
-                          xl: 15,
-                          lg: 15,
-                          md: 12,
-                          sm: 10,
-                          xs: 10,
-                        },
+                        fontSize: Content,
                         fontFamily: "Heebo",
                         fontWeight: "600",
                       }}
@@ -540,8 +522,8 @@ export default function Page() {
                 >
                   <Typography
                     sx={{
-                      width: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
-                      height: { xl: 32, lg: 32, md: 25, sm: 23, xs: 20 },
+                      width: Icon,
+                      height: Icon,
                       marginBottom: {
                         xl: "17px",
                         lg: "7px",
@@ -557,13 +539,7 @@ export default function Page() {
                     sx={{
                       fontFamily: "Poppins",
                       fontWeight: "600",
-                      fontSize: {
-                        xl: 20,
-                        lg: 20,
-                        md: 16,
-                        sm: 10,
-                        xs: 10,
-                      },
+                      fontSize: Title,
                       marginTop: {
                         xl: "17px",
                         lg: "17px",
@@ -585,13 +561,7 @@ export default function Page() {
                     }}
                     marginLeft={3}
                     sx={{
-                      fontSize: {
-                        xl: 15,
-                        lg: 15,
-                        md: 12,
-                        sm: 10,
-                        xs: 10,
-                      },
+                      fontSize: Content,
                       fontFamily: "Heebo",
                       color: "rgba(43, 43, 43, 0.80)",
                     }}
@@ -606,13 +576,7 @@ export default function Page() {
                       cursor: "pointer",
                       fontFamily: "Heebo",
                       fontWeight: "600",
-                      fontSize: {
-                        xl: 15,
-                        lg: 15,
-                        md: 12,
-                        sm: 10,
-                        xs: 10,
-                      },
+                      fontSize: Content,
                     }}
                     onClick={handleEmailCopy}
                   >
